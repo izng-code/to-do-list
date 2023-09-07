@@ -1,0 +1,32 @@
+body {
+    margin: 0px;
+    height: 100vh;
+    overflow: hidden;
+}
+header {
+    background-color: #d41d6c;
+    height: 50vh;
+    text-align: center;
+}
+
+.header-text {
+    top: 10px;
+    
+    font-family: "Space Grotesk";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 128px;
+    line-height: 162px;
+    letter-spacing: 0.47em;
+    
+    color: #000000;
+    
+    text-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25);
+}
+
+.plus {
+    position: fixed;
+    top: 92vh;
+    left: 0.5rem;
+}
+
