@@ -1,0 +1,1 @@
+(()=>{"use strict";let t=[];t.push(new function(t,i,o,e){this.title=t,this.description=i,this.dueDate=o,this.priority=e}("Add more items","Add more to-do-items to your first project","soon","high")),console.log(t)})();
