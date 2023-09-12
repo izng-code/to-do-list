@@ -58,10 +58,26 @@ header {
     width: 350px;
     background-color: #FF9F9F;
     border-radius: 23px;
+    padding: 0px 0px 15px 0px;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.25);
 }
 
 .to-do-container {
     display:flex;
     justify-content: space-around;
     align-items: center;
+    margin: 10px;
+}
+
+.to-do-container div {
+    display: flex;
+    align-items: center;
+}
+
+.icon-div {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 25px;
+    gap: 15px;
 }
