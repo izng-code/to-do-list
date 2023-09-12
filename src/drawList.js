@@ -11,7 +11,8 @@ function drawList(){
     projectContainer.appendChild(projectTitle);
     for (let item in todoList){
         let itemDiv = document.createElement("div");
-        itemDiv.classList.add("to-do-container")
+        itemDiv.classList.add("to-do-container");
+        itemDiv.setAttribute("number", todoList[item].number);
         projectContainer.appendChild(itemDiv);
         let checkbox = document.createElement("div");
         checkbox.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="26" height="26" viewBox="0 0 50 50">
