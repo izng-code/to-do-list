@@ -69,6 +69,12 @@ header {
     margin: 10px;
 }
 
+.to-do-container:hover {
+    cursor: pointer;
+    background-color: #00000025;
+    border-radius: 10px;
+}
+
 .to-do-container div {
     display: flex;
     align-items: center;
