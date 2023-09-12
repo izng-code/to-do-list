@@ -1,5 +1,5 @@
-import TodoItem from "./TodoItem";
+import todoList from "./makeList";
+import drawList from "./drawList";
 
-let todoList = [];
-todoList.push(new TodoItem("Add more items", "Add more to-do-items to your first project","soon","high"))
 console.log(todoList)
+drawList();

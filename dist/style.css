@@ -2,6 +2,7 @@ body {
     margin: 0px;
     height: 100vh;
     overflow: hidden;
+    font-family: "Space Grotesk";
 }
 header {
     background-color: #d41d6c;
@@ -12,7 +13,6 @@ header {
 .header-text {
     top: 10px;
     
-    font-family: "Space Grotesk";
     font-style: normal;
     font-weight: 400;
     font-size: 128px;
@@ -30,3 +30,38 @@ header {
     left: 0.5rem;
 }
 
+#content {
+    display: grid;
+    grid-template-rows: 25% 50% 25%;
+}
+
+.to-do-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-title {
+    height: 50px;
+    background-color: #FF7171;
+    border-radius: 23px 23px 0px 0px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 126.6%;
+    letter-spacing: -0.06em;
+    color: #FFFFFF;
+}
+
+.project-container {
+    height: fit-content;
+    width: 350px;
+    background-color: #FF9F9F;
+    border-radius: 23px;
+}
+
+.to-do-container {
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
