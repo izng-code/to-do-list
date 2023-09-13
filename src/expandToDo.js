@@ -1,4 +1,5 @@
 import todoList from "./makeList";
+import collapseExpandedToDo from "./collapseExpandedToDo";
 
 const expandToDo = function(number) {
     let content = document.querySelector("#content");
@@ -34,6 +35,7 @@ const expandToDo = function(number) {
     expandedToDo.appendChild(dueText);
     expandedToDo.appendChild(priority);
     expandedToDo.appendChild(priorityText);
+    collapseExpandedToDo();
 }
 
 export default expandToDo
