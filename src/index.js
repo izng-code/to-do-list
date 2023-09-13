@@ -1,7 +1,6 @@
 import todoList from "./makeList";
-import drawList from "./drawList";
+import drawPage from "./drawPage";
 import clickHandler from "./clickHandler";
 
-console.log(todoList)
-drawList();
+drawPage();
 clickHandler();

@@ -4,7 +4,6 @@ const collapseExpandedToDo = function() {
         let expandedToDo = document.querySelector(".expanded-to-do");
         document.body.removeChild(expandedToDo);
         content.classList.remove("blur");
-        console.log("poo");
     });
 }
 
