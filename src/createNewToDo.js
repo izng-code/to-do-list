@@ -1,3 +1,5 @@
+import pushNewTodo from "./pushNewToDo";
+
 const createNewToDo = function() {
     let content = document.querySelector("#content");
     content.classList.add("blur");
@@ -14,15 +16,15 @@ const createNewToDo = function() {
     let priority = document.createElement("div");
     priority.textContent = "Priority";
     let nameText = document.createElement("input");
-    nameText.name = "name"
+    nameText.id = "name"
     nameText.required = true
     let descriptionText = document.createElement("input");
-    descriptionText.name = "description"
+    descriptionText.id = "description"
     descriptionText.required = true
     let dueText = document.createElement("input");
-    dueText.name = "due"
+    dueText.id = "due"
     let priorityText = document.createElement("select");
-    priorityText.name = "priority"
+    priorityText.id = "priority"
     priorityText.value = "Priority"
     priorityText.required = true;
     let priorityHigh = document.createElement("option");
@@ -41,6 +43,7 @@ const createNewToDo = function() {
     addButton.type = "Submit";
     addButton.value = "Add";
     addButton.name = "add-button"
+    addButton.onclick = function(e) {e.stopPropagation(); pushNewTodo();}
     newToDo.appendChild(name);
     newToDo.appendChild(nameText);
     newToDo.appendChild(description);
