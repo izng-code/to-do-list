@@ -88,7 +88,7 @@ header {
     gap: 15px;
 }
 
-.expanded-to-do {
+.expanded-to-do, .add-to-do-form {
     display: grid;
     grid-template-columns: 50% 50%;
     padding: 15px;
@@ -103,6 +103,10 @@ header {
     background-color: #00000025;
     border-radius: 4px;
     width: fit-content;
+}
+
+svg {
+    cursor: pointer;
 }
 
 .blur {
