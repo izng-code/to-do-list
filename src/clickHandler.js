@@ -1,6 +1,7 @@
 import expandToDo from "./expandToDo";
 import collapseExpandedToDo from "./collapseExpandedToDo";
 import createNewToDo from "./createNewToDo";
+import completeToDo from "./completeToDo";
 
 const clickHandler = function() {
     let toDoItems = document.querySelectorAll(".to-do-container");
@@ -17,6 +18,13 @@ const clickHandler = function() {
         createNewToDo();
     }))
     collapseExpandedToDo();
+    let checkboxes = document.querySelectorAll(".checkbox");
+    checkboxes.forEach((button) => button.addEventListener("click", function(e) {
+        e.stopPropagation();
+        e.preventDefault();
+        completeToDo(button);
+    }))
+
 }
 
 export default clickHandler;
