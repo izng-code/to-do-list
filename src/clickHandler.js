@@ -2,6 +2,9 @@ import expandToDo from "./expandToDo";
 import collapseExpandedToDo from "./collapseExpandedToDo";
 import createNewToDo from "./createNewToDo";
 import completeToDo from "./completeToDo";
+import createNewList from "./createNewList";
+import drawPage from "./drawPage";
+import erasePage from "./erasePage";
 
 const clickHandler = function() {
     let toDoItems = document.querySelectorAll(".to-do-container");
@@ -15,7 +18,7 @@ const clickHandler = function() {
     addButtons.forEach((button) => button.addEventListener("click", function(e) {
         e.stopPropagation();
         e.preventDefault();
-        createNewToDo();
+        createNewToDo(button);
     }))
     collapseExpandedToDo();
     let checkboxes = document.querySelectorAll(".checkbox");
@@ -24,7 +27,12 @@ const clickHandler = function() {
         e.preventDefault();
         completeToDo(button);
     }))
-
+    let plusButton = document.querySelector(".plus")
+    plusButton.addEventListener("click", function() {
+        createNewList();
+        erasePage();
+        drawPage();
+    })
 }
 
 export default clickHandler;

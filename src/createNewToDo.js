@@ -1,6 +1,6 @@
 import pushNewTodo from "./pushNewToDo";
 
-const createNewToDo = function() {
+const createNewToDo = function(button) {
     let content = document.querySelector("#content");
     content.classList.add("blur");
     let newToDo = document.createElement("form");
@@ -43,7 +43,7 @@ const createNewToDo = function() {
     addButton.type = "Submit";
     addButton.value = "Add";
     addButton.name = "add-button"
-    addButton.onclick = function(e) {e.stopPropagation(); pushNewTodo();}
+    addButton.onclick = function(e) {e.stopPropagation(); pushNewTodo(button);}
     newToDo.appendChild(name);
     newToDo.appendChild(nameText);
     newToDo.appendChild(description);
