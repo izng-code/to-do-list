@@ -19,7 +19,8 @@ const clickHandler = function() {
     addButtons.forEach((button) => button.addEventListener("click", function(e) {
         e.stopPropagation();
         e.preventDefault();
-        createNewToDo(button);
+        let listnumber = button.getAttribute("listnumber");
+        createNewToDo(listnumber);
     }))
     collapseExpandedToDo();
     let checkboxes = document.querySelectorAll(".checkbox");

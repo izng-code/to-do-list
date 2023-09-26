@@ -10,7 +10,7 @@ if (localStorage.length > 0) {
    //todoList = JSON.parse(json)
 }
 else {
-    todoList[0].push(new TodoItem("Add more items", "Add more to-do-items to your first project","soon","high", 0, 0))
+    todoList[0].push(new TodoItem("Add more items", "Add more to-do-items to your first project","soon","high", 0))
     localStorage.setItem("todo0", JSON.stringify(todoList[0]));
 }
 export default todoList

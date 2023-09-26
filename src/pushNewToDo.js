@@ -1,14 +1,14 @@
 import TodoItem from "./TodoItem";
 import todoList from "./makeList";
 
-const pushNewTodo = function(button) {
+const pushNewTodo = function(listnumber) {
+    console.log(listnumber)
     let name = document.getElementById("name").value;
     let description = document.getElementById("description").value;
     let due = document.getElementById("due").value;
     let priority = document.getElementById("priority").value;
-    let list = button.getAttribute["listnumber"];
-    todoList.push(new TodoItem(name, description, due, priority, todoList.length, list))
-    localStorage.setItem("todos", JSON.stringify(todoList));
+    todoList[listnumber].push(new TodoItem(name, description, due, priority, todoList[listnumber].length))
+    localStorage.setItem(`todo${listnumber}`, JSON.stringify(todoList[listnumber]));
 }
 
 export default pushNewTodo
