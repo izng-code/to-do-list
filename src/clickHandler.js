@@ -5,6 +5,7 @@ import completeToDo from "./completeToDo";
 import createNewList from "./createNewList";
 import drawPage from "./drawPage";
 import erasePage from "./erasePage";
+import deleteList from "./deleteList";
 
 const clickHandler = function() {
     let toDoItems = document.querySelectorAll(".to-do-container");
@@ -33,6 +34,13 @@ const clickHandler = function() {
         erasePage();
         drawPage();
     })
+    let removeButton = document.querySelectorAll(".remove-list")
+    removeButton.forEach((button) => button.addEventListener("click", function(e){
+        e.stopPropagation();
+        e.preventDefault();
+        let listnumber = button.getAttribute("listnumber");
+        deleteList(listnumber);
+    }))
 }
 
 export default clickHandler;
