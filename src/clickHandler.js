@@ -24,10 +24,11 @@ const clickHandler = function() {
     }))
     collapseExpandedToDo();
     let checkboxes = document.querySelectorAll(".checkbox");
-    checkboxes.forEach((button) => button.addEventListener("click", function(e) {
+    checkboxes.forEach((button) => button.addEventListener("click", function(e){
         e.stopPropagation();
         e.preventDefault();
-        completeToDo(button);
+        let listnumber = button.getAttribute("listnumber");
+        completeToDo(button,listnumber);
     }))
     let plusButton = document.querySelector(".plus")
     plusButton.addEventListener("click", function() {
