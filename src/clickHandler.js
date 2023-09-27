@@ -10,10 +10,11 @@ import deleteList from "./deleteList";
 const clickHandler = function() {
     let toDoItems = document.querySelectorAll(".to-do-container");
     toDoItems.forEach((todo) => todo.addEventListener("click", function(e) {
+        let listnumber = todo.getAttribute("listnumber");
         let currentToDo = todo.getAttribute("number");
         e.stopPropagation();
         e.preventDefault();
-        expandToDo(currentToDo);
+        expandToDo(listnumber,currentToDo);
     }))
     let addButtons = document.querySelectorAll(".add-to-do");
     addButtons.forEach((button) => button.addEventListener("click", function(e) {

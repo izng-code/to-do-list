@@ -1,7 +1,8 @@
 import todoList from "./makeList";
 import collapseExpandedToDo from "./collapseExpandedToDo";
 
-const expandToDo = function(number) {
+const expandToDo = function(listnumber, number) {
+    console.log(number)
     let content = document.querySelector("#content");
     content.classList.add("blur");
     let expandedToDo = document.createElement("div");
@@ -17,16 +18,16 @@ const expandToDo = function(number) {
     priority.textContent = "Priority";
     let nameText = document.createElement("div");
     nameText.classList.add("editable-text");
-    nameText.textContent = todoList[number].title;
+    nameText.textContent = todoList[listnumber][number].title;
     let descriptionText = document.createElement("div");
     descriptionText.classList.add("editable-text");
-    descriptionText.textContent = todoList[number].description;
+    descriptionText.textContent = todoList[listnumber][number].description;
     let dueText = document.createElement("div");
     dueText.classList.add("editable-text");
-    dueText.textContent = todoList[number].dueDate;
+    dueText.textContent = todoList[listnumber][number].dueDate;
     let priorityText = document.createElement("div");
     priorityText.classList.add("editable-text");
-    priorityText.textContent = todoList[number].priority;
+    priorityText.textContent = todoList[listnumber][number].priority;
     expandedToDo.appendChild(name);
     expandedToDo.appendChild(nameText);
     expandedToDo.appendChild(description);

@@ -134,3 +134,6 @@ svg {
     animation-fill-mode: forwards; 
 }
 
+.completed {
+    background-color: #0000001e;
+}
