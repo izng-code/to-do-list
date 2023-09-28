@@ -2,7 +2,6 @@ import todoList from "./makeList";
 import collapseExpandedToDo from "./collapseExpandedToDo";
 
 const expandToDo = function(listnumber, number) {
-    console.log(number)
     let content = document.querySelector("#content");
     content.classList.add("blur");
     let expandedToDo = document.createElement("div");

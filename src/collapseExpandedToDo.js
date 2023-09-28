@@ -1,9 +1,13 @@
 const collapseExpandedToDo = function() {
     let content = document.querySelector("#content");
     content.addEventListener("click", function(e){
+        e.stopPropagation();
+        e.preventDefault();
         let expandedToDo = document.querySelector(".expanded-to-do");
-        document.body.removeChild(expandedToDo);
-        content.classList.remove("blur");
+        if (expandedToDo) {
+            expandedToDo.remove();
+            content.classList.remove("blur");
+        }
     });
 }
 

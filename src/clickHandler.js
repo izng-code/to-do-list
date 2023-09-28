@@ -18,7 +18,7 @@ const clickHandler = function() {
     }))
     let addButtons = document.querySelectorAll(".add-to-do");
     addButtons.forEach((button) => button.addEventListener("click", function(e) {
-        e.stopPropagation();
+        e.stopImmediatePropagation();
         e.preventDefault();
         let listnumber = button.getAttribute("listnumber");
         createNewToDo(listnumber);
@@ -32,17 +32,22 @@ const clickHandler = function() {
         completeToDo(button,listnumber);
     }))
     let plusButton = document.querySelector(".plus")
-    plusButton.addEventListener("click", function() {
+    plusButton.addEventListener("click", function onClick(e) {
+        e.stopImmediatePropagation();
+        e.preventDefault();
         createNewList();
+        plusButton.removeEventListener("click", onClick);
         erasePage();
         drawPage();
-    })
+    }, {once : true});
     let removeButton = document.querySelectorAll(".remove-list")
     removeButton.forEach((button) => button.addEventListener("click", function(e){
-        e.stopPropagation();
+        e.stopImmediatePropagation();
         e.preventDefault();
         let listnumber = button.getAttribute("listnumber");
         deleteList(listnumber);
+        erasePage();
+        drawPage();    
     }))
 }
 

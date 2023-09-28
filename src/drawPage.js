@@ -1,15 +1,17 @@
 import todoList from "./makeList";
 import drawList from "./drawList";
+import clickHandler from "./clickHandler";
 
 function drawPage(){
     let content = document.querySelector(".to-do-list");
     for (let i = 0; i < localStorage.length; i++) {
+        console.log(todoList)
         let projectContainer = document.createElement("div");
         projectContainer.classList.add("project-container");
         projectContainer.setAttribute("listnumber", i.toString());
         let projectTitle = document.createElement("div");
         projectTitle.classList.add("project-title");
-        projectTitle.textContent = "My first project"
+        projectTitle.textContent = todoList[i][0];
         content.appendChild(projectContainer);
         projectContainer.appendChild(projectTitle);
         drawList(todoList[i], i);
@@ -22,6 +24,7 @@ function drawPage(){
         </svg>`;
         projectContainer.appendChild(iconDiv)
     }
+    clickHandler();
 };
 
 export default drawPage

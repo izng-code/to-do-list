@@ -2,8 +2,8 @@ import TodoItem from "./TodoItem";
 import todoList from "./makeList";
 
 const pushNewTodo = function(listnumber) {
-    console.log(listnumber)
     let name = document.getElementById("name").value;
+    console.log(name);
     let description = document.getElementById("description").value;
     let due = document.getElementById("due").value;
     let priority = document.getElementById("priority").value;
