@@ -1,9 +1,10 @@
 const scrollHorizontal = function() {
-    const scrollContainer = document.querySelector(".to-do-list");
+    const scrollContainer = document.querySelector("#content");
 
     scrollContainer.addEventListener("wheel", (evt) => {
         evt.preventDefault();
-        scrollContainer.scrollLeft += evt.deltaY;
+        evt.stopImmediatePropagation();
+        document.querySelector(".to-do-list").scrollLeft += evt.deltaY;
     });
 }
 
