@@ -88,8 +88,8 @@ a {
 .project-container, .expanded-to-do {
     height: fit-content;
     max-height: 90%;
-    width: 40%;
-    max-width: fit-content;
+    max-width: 35%;
+    min-width: fit-content;
     background-color: #FF9F9F;
     border-radius: 23px;
     padding: 0px 0px 15px 0px;
