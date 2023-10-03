@@ -5,7 +5,6 @@ import clickHandler from "./clickHandler";
 function drawPage(){
     let content = document.querySelector(".to-do-list");
     for (let i = 0; i < localStorage.length; i++) {
-        console.log(todoList)
         let projectContainer = document.createElement("div");
         projectContainer.classList.add("project-container");
         projectContainer.setAttribute("listnumber", i.toString());
