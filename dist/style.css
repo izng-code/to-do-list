@@ -28,8 +28,25 @@ header {
     position: fixed;
     top: 92vh;
     left: 0.5rem;
+    z-index: 2;
 }
 
+a {
+    position: fixed;
+    top: 97.75vh;
+    text-decoration: none;
+    color: rgb(73, 73, 73);
+    background-color: rgba(199, 199, 199, 0.342);
+    text-align: center;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    gap: 8px;
+}
+
+img {
+    height: 20px;
+}
 #content {
     display: grid;
     grid-template-rows: 25% 50% 25%;
@@ -39,11 +56,22 @@ header {
     display: flex;
     justify-content: baseline;
     align-items: center;
-    overflow-x: hidden;
     scroll-behavior: cubic-bezier(.17,.67,.83,.67);
     gap: 25px;
     padding-left: 25px;
     padding-right: 25px;
+    transition: 1s;
+    overflow-x: hidden;
+}
+
+.to-do-list:hover {
+    animation: delay-overflow 20ms 0 1 normal ease-in;
+    overflow-x: scroll;
+}
+
+@keyframes delay-overflow {
+    from {overflow-x: hidden;}
+    to {overflow-x: scroll;}
 }
 
 .project-title {
@@ -79,30 +107,30 @@ header {
     overflow-y: auto;
 }
 
-.project-container::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 2px;
-    height: 20px;
+    height: 4px;
 }
 
-.project-container::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: #0000009a;
     border-radius: 20px;
 }
 
-.project-container::-webkit-scrollbar-corner {
+::-webkit-scrollbar-corner {
     background-color: transparent;
 }
 
-.project-container::-webkit-scrollbar-track-piece:start {
+::-webkit-scrollbar-track-piece:start {
     background: transparent;
     margin-top: 15px;
+    margin-left: 25px;
 }
-.project-container::-webkit-scrollbar-track-piece:end {
+::-webkit-scrollbar-track-piece:end {
     background: transparent;
     margin-bottom: 20px;
+    margin-right: 20px;
 }
-
-
 
 .to-do-container {
     display: grid;
@@ -129,13 +157,42 @@ header {
 .expanded-to-do, .add-to-do-form {
     display: grid;
     grid-template-columns: 50% 50%;
-    padding: 15px;
+    gap: 8px;
+    padding: 25px;
     position: absolute;
     top: 30vh;
     left: 30vw;
+    padding-bottom: 45px;
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 8px 24px 0 rgba(0, 0, 0, 0.19);
 }
 
+
+input , select, textarea{
+    border-radius: 8px;
+    border: none;
+    border-bottom: 1px solid black;
+    padding-left: 6px;
+}
+
+textarea {
+    height: 100px;
+    font-family: "Space Grotesk";
+    letter-spacing: -0.06em;
+}
+
+input[type="Submit"] {
+    background-color: #d41d6c;
+    color: whitesmoke;
+    font-weight: 900;
+    font-size: 1rem;
+    position: absolute;
+    left: 45%;
+    top: 87%;
+    width: 60px;
+    height: 25px;
+    border: none;
+    cursor: pointer;
+}
 .editable-text:hover {
     cursor: text;
     background-color: #00000025;
